@@ -247,54 +247,6 @@ uninstall_theme() {
   clear
 }
 
-# Fungsi untuk menginstal panel
-instal_panel() {
-  echo -e "                                                       "
-  echo -e "${BIRU}[+] =============================================== [+]${NC}"
-  echo -e "${BIRU}[+]                    INSTAL PANEL                 [+]${NC}"
-  echo -e "${BIRU}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  bash <(curl -s https://pterodactyl-installer.se)
-  bash <(curl -s https://pterodactyl-installer.se)
-  echo -e "                                                       "
-  echo -e "${HIJAU}[+] =============================================== [+]${NC}"
-  echo -e "${HIJAU}[+]                 INSTAL PANEL SUKSES             [+]${NC}"
-  echo -e "${HIJAU}[+] =============================================== [+]${NC}"
-  echo -e "                                                       "
-  sleep 5
-}
-
-# Fungsi untuk menginstal otomatis
-instal_otomatis() {
-echo -e "${BIRU}+-----------------------------------------+${NC}"
-echo -e "${BIRU}|            FITUR COMING SOON            |${NC}"
-echo -e "${BIRU}+-----------------------------------------+${NC}"
-sleep 5
-clear
-}
-
-# Kata kata hari ini
-kata_kata() {
-echo -e "KONTOL BAPAK KAU PECAH"
-sleep 5
-}
-
-#Coming soon
-coming_soon() {
-echo -e "${BIRU}+-------------------------------------------+${NC}"
-echo -e "${BIRU}|           FITUR YANG AKAN HADIR           |${NC}"
-echo -e "${BIRU}+-------------------------------------------+${NC}"
-echo -e "${BIRU}|            AUTO INSTAL PANEL              |${NC}"
-echo -e "${BIRU}|              DDOS ATTACK                  |${NC}"
-echo -e "${BIRU}|                SPAM OTP                   |${NC}"
-echo -e "${BIRU}|                   DLL                     |${NC}"
-echo -e "${BIRU}+-------------------------------------------+${NC}"
-echo -e "${BIRU}|         NANTIKAN SAJA FITUR NYA 😁        |${NC}"
-echo -e "${BIRU}|         KALAU SEMPAT GW TAMBAHIN 🗿       |${NC}"
-echo -e "${BIRU}+-------------------------------------------+${NC}"
-sleep 10
-}
-
 # Skrip utama
 display_welcome
 authenticate
@@ -304,37 +256,21 @@ while true; do
   echo -e "${BIRU}+-----------------------------------------+${NC}"
   echo -e "${BIRU}|             SELECT OPTIONS              |${NC}"
   echo -e "${BIRU}+-----------------------------------------+${NC}"
-  echo -e "${BIRU}|0. 𝙵𝙸𝚃𝚄𝚁 𝙲𝙾𝙼𝙸𝙽𝙶 𝚂𝙾𝙾𝙽                     |${NC}"
-  echo -e "${BIRU}|1. 𝙸𝙽𝚂𝚃𝙻 𝚃𝙷𝙴𝙼𝙴                           |${NC}"
+  echo -e "${BIRU}|1. 𝙸𝙽𝚂𝚃𝙰𝙻 𝚃𝙷𝙴𝙼𝙴                          |${NC}"
   echo -e "${BIRU}|2. 𝚄𝙸𝙽𝚂𝚃𝙰𝙻 𝚃𝙷𝙴𝙼𝙴                         |${NC}"
-  echo -e "${BIRU}|3. 𝙸𝙽𝚂𝚃𝙰𝙻 𝙿𝙰𝙽𝙴𝙻 (𝙱𝙸𝙰𝚂𝙰)                  |${NC}"
-  echo -e "${BIRU}|4. 𝙸𝙽𝚂𝚃𝙰𝙻 𝙿𝙰𝙽𝙴𝙻 (𝙾𝚃𝙾𝙼𝙰𝚃𝙸𝚂)               |${NC}"
-  echo -e "${BIRU}|5. 𝙺𝙰𝚃𝙰 𝙺𝙰𝚃𝙰 𝙺𝙽𝚃𝙻                        |${NC}"
   echo -e "${BIRU}|x. 𝙴𝚇𝙸𝚃 𝚃𝙾 𝚂𝙲𝚁𝙸𝙿𝚃                        |${NC}"
   echo -e "${BIRU}+-----------------------------------------+${NC}"
-  echo -e "${BIRU}|PILIH SALAH SATU (1/2/3/4/5/𝗫) :         |${NC}"
+  echo -e "${BIRU}|PILIH SALAH SATU (1/2/𝗫) :               |${NC}"
   echo -e "${BIRU}+-----------------------------------------+${NC}"
   read -r MENU_CHOICE
   clear
 
   case "$MENU_CHOICE" in
-    0)
-      coming_soon
-      ;;
     1)
       install_theme
       ;;
     2)
       uninstall_theme
-      ;;
-    3)
-      instal_panel
-      ;;
-    4)
-      instal_otomatis
-      ;;
-    5)
-      kata_kata
       ;;
     x)
       echo "Keluar dari skrip."
